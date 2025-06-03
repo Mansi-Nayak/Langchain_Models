@@ -13,9 +13,10 @@
 
 # print(result.content)
 
-from huggingface_hub import InferenceClient
-from dotenv import load_dotenv
 import os
+
+from dotenv import load_dotenv
+from huggingface_hub import InferenceClient
 
 load_dotenv()
 
@@ -32,13 +33,15 @@ else:
         response = client.text_generation(
             model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
             prompt="What is the capital of India?",
-            max_new_tokens=50
+            max_new_tokens=50,
         )
         print(f"TinyLlama direct client response: {response}")
 
     except Exception as e:
         print(f"Error with TinyLlama direct client: {e}")
-        print("This often means the model isn't served on the public Inference API for text-generation as expected.")
+        print(
+            "This often means the model isn't served on the public Inference API for text-generation as expected."
+        )
 
     print("\n--- Trying with a known working model (Mistral-7B-Instruct) ---")
     try:
@@ -47,10 +50,12 @@ else:
         response_mistral = client_mistral.text_generation(
             model="mistralai/Mistral-7B-Instruct-v0.2",
             prompt="What is the capital of India?",
-            max_new_tokens=50
+            max_new_tokens=50,
         )
         print(f"Mistral-7B-Instruct direct client response: {response_mistral}")
 
     except Exception as e:
         print(f"Error with Mistral-7B-Instruct direct client: {e}")
-        print("If this also fails, there might be a deeper issue with your token or network.")
+        print(
+            "If this also fails, there might be a deeper issue with your token or network."
+        )
