@@ -15,16 +15,17 @@
 
 # print(result.content)
 
-from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
 import os
+
 from dotenv import load_dotenv
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 load_dotenv()  # loads HUGGINGFACE_TOKEN from .env
 
 llm = HuggingFaceEndpoint(
     repo_id="TheBloke/TinyLlama-1.1B-Chat-GGML",  # <-- your model repo here
     task="text-generation",
-    token=os.getenv("HUGGINGFACEHUB_API_TOKEN")  # if your repo is gated/private
+    token=os.getenv("HUGGINGFACEHUB_API_TOKEN"),  # if your repo is gated/private
 )
 
 model = ChatHuggingFace(llm=llm)
