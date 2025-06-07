@@ -1,3 +1,16 @@
+"""
+1. The code builds a Streamlit-based research tool where users can select a
+    research paper, explanation style, and explanation length from dropdowns.
+2. It uses load_prompt() to load a prompt template (likely stored in
+    template.json) which defines how the explanation should be structured.
+3. When the "Summarize" button is clicked, the selected inputs are passed
+    to the prompt template.
+4. Instead of manually formatting the prompt, the template and OpenAI model
+    are combined into a chain (template | model) for cleaner execution.
+5. The generated explanation is then displayed on the Streamlit page
+    using st.write().
+"""
+
 import streamlit as st
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate, load_prompt
@@ -7,7 +20,7 @@ load_dotenv()
 
 model = ChatOpenAI()
 
-st.header("🧠 Research Tool")
+st.header("Research Tool")
 
 # Dynamic
 paper_input = st.selectbox(
@@ -36,7 +49,7 @@ length_input = st.selectbox(
 
 # the template file generate through the prompt_generator.py and then we use that template file here
 
-template = load_prompt('template.json')
+template = load_prompt("template.json")
 
 # fill the placeholders
 
@@ -58,9 +71,11 @@ template = load_prompt('template.json')
 
 if st.button("Summarize"):
     chain = template | model
-    result = chain.invoke({
-        "paper_input": paper_input,
-        "style_input": style_input,
-        "length_input": length_input,
-    })
+    result = chain.invoke(
+        {
+            "paper_input": paper_input,
+            "style_input": style_input,
+            "length_input": length_input,
+        }
+    )
     st.write(result.content)
