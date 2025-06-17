@@ -8,3 +8,4 @@ langchain
 4. Embedding Models with open query, docs, local, similarity.
 5. Langchain Prompt static, dynamic, generator, prompt_template, 
    chatbot, messages, chatbot messages, chat_prompt_template.
+6. Langchain structured output demo:- typeddict, with s/o demo, s/o annotated, pydantic     with_structured_output_pydantic, json_schema, with_structured_output_json
