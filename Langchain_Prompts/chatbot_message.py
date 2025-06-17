@@ -11,8 +11,7 @@ history and neatly displays each message in the chat format.
 
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
-from transformers import (BlenderbotForConditionalGeneration,
-                          BlenderbotTokenizer)
+from transformers import BlenderbotForConditionalGeneration, BlenderbotTokenizer
 
 # Load the BlenderBot tokenizer and model
 model_name = "facebook/blenderbot-1B-distill"
@@ -25,8 +24,7 @@ st.write("Talk to an open-source conversational model!")
 
 # Initialize chat history in session state
 if "history" not in st.session_state:
-    st.session_state.history = [SystemMessage
-                                (content="You are a helpful AI assistant")]
+    st.session_state.history = [SystemMessage(content="You are a helpful AI assistant")]
 
 user_input = st.text_input("You:")
 
