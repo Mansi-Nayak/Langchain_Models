@@ -1,11 +1,11 @@
 """
-This code creates a simple Streamlit web app for a research paper 
-summarization tool. It first loads environment variables and initializes an 
-OpenAI language model using LangChain. The interface includes three dropdown 
-menus where the user can select a research paper title, the explanation style 
-(e.g., beginner or technical), and the desired explanation length. When the 
-"Summarize" button is clicked, it currently just prints "Hello" in the 
-terminal, indicating where the summarization logic would be added later. 
+This code creates a simple Streamlit web app for a research paper
+summarization tool. It first loads environment variables and initializes an
+OpenAI language model using LangChain. The interface includes three dropdown
+menus where the user can select a research paper title, the explanation style
+(e.g., beginner or technical), and the desired explanation length. When the
+"Summarize" button is clicked, it currently just prints "Hello" in the
+terminal, indicating where the summarization logic would be added later.
 The UI is ready, but the model response generation is yet to be implemented.
 """
 
