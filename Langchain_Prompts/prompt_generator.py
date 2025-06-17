@@ -1,14 +1,13 @@
 """
-This code defines a prompt template using PromptTemplate from LangChain, which 
-formats how the AI should summarize a research paper based on three user 
-inputs: paper title, explanation style, and explanation length. The template 
-includes instructions to add mathematical details and analogies when relevant 
-and to avoid guessing when information is missing. It ensures the generated 
-summaries are accurate and follow the selected preferences. Finally, it saves 
-this prompt structure as a template.json file for later reuse in other 
+This code defines a prompt template using PromptTemplate from LangChain, which
+formats how the AI should summarize a research paper based on three user
+inputs: paper title, explanation style, and explanation length. The template
+includes instructions to add mathematical details and analogies when relevant
+and to avoid guessing when information is missing. It ensures the generated
+summaries are accurate and follow the selected preferences. Finally, it saves
+this prompt structure as a template.json file for later reuse in other
 LangChain-based applications.
 """
-
 
 from langchain_core.prompts import PromptTemplate
 
@@ -31,7 +30,7 @@ Ensure the summary is clear, accurate, and aligned with the provided
 style and length.
 """,
     input_variables=["paper_input", "style_input", "length_input"],
-    # validate_template=True (when you miss or write extra input_variable 
+    # validate_template=True (when you miss or write extra input_variable
     # then this error will show)
 )
 
