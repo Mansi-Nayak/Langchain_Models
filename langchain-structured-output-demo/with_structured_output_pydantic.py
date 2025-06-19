@@ -10,10 +10,11 @@ information extraction in NLP workflows.
 """
 
 import os
+from typing import Literal, Optional
+
 from dotenv import load_dotenv
-from typing import Optional, Literal
-from pydantic import BaseModel, Field
 from langchain_huggingface import HuggingFaceEndpoint
+from pydantic import BaseModel, Field
 
 # Load environment variables
 load_dotenv()
