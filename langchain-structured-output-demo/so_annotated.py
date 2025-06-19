@@ -7,13 +7,13 @@ generation. A system prompt guides the model to return the output in a
 structured format, which is then printed.
 """
 
-from typing import TypedDict, Annotated, Optional, Literal
+from typing import Annotated, Literal, Optional, TypedDict
 
+import torch
+from langchain_core.messages import HumanMessage, SystemMessage
 # from langchain_community.llms import HuggingFacePipeline
 from langchain_huggingface import HuggingFacePipeline
-from langchain_core.messages import HumanMessage, SystemMessage
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-import torch
 
 # Define structured output schema
 
