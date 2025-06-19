@@ -8,8 +8,9 @@ Coerce means Pydantic helps fix the data type for you, even if you gave it the
 "wrong" type.
 """
 
-from pydantic import BaseModel, EmailStr, Field
 from typing import Optional
+
+from pydantic import BaseModel, EmailStr, Field
 
 
 class Student(BaseModel):
