@@ -11,7 +11,8 @@
 """
 
 import streamlit as st
-from transformers import BlenderbotForConditionalGeneration, BlenderbotTokenizer
+from transformers import (BlenderbotForConditionalGeneration,
+                          BlenderbotTokenizer)
 
 # Load the BlenderBot tokenizer and model
 model_name = "facebook/blenderbot-1B-distill"
