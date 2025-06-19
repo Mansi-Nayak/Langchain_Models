@@ -7,10 +7,10 @@ interaction with the Hugging Face endpoint.The final output is a concise
 summary suitable for quick understanding or report usage.
 """
 
-from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from dotenv import load_dotenv
-from langchain_core.prompts import PromptTemplate
 from langchain_core.messages import HumanMessage
+from langchain_core.prompts import PromptTemplate
+from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 
 load_dotenv()
 
