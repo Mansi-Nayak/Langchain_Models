@@ -1,3 +1,11 @@
+"""
+This script uses a Hugging Face model via LangChain to generate structured 
+data about a fictional person from a given place. It defines a Pydantic 
+schema to enforce output structure and validation. The `google/gemma-2-2b-it` 
+model is invoked using a prompt template. The final structured result 
+includes the person's name, age (over 18), and city.
+"""
+
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
