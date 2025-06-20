@@ -58,6 +58,8 @@ This project demonstrates various capabilities of Langchain models by working wi
    - PDF Reader
    - LLM Chain
    - Retrieval QA Chain
+   - Langchain demo problem Google Colab
+   - Langchain demo solution Google Colab
 ---
 
 ## Technologies Used
