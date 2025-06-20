@@ -47,6 +47,17 @@ This project demonstrates various capabilities of Langchain models by working wi
    - Json Output Parser
    - Pydantic Output Parser
 
+8. **Langchain Chains**
+   - Simple Chain
+   - Sequential Chain
+   - Parallel Chain
+   - Conditional Chain
+
+9. **Langchain Runnables**
+   - Simple LLM App
+   - PDF Reader
+   - LLM Chain
+   - Retrieval QA Chain
 ---
 
 ## Technologies Used
