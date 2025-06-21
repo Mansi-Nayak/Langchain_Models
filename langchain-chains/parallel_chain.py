@@ -5,6 +5,28 @@ from a given text using Hugging Face models.Then, it merges both outputs into
 a single final document using another local model.The LangChain
 RunnableParallel and PromptTemplate are used for structure and clarity.
 This script runs offline and does not require API keys or cloud access.
+
+          RunnableParallel
+           /            \
+          v              v
+ PromptTemplate      PromptTemplate
+    (notes)             (quiz)
+      |                   |
+      v                   v
+HuggingFacePipeline  HuggingFacePipeline
+      |                   |
+      v                   v
+StrOutputParser     StrOutputParser
+           \           /
+            v         v
+        PromptTemplate (merge notes + quiz)
+                   |
+                   v
+        HuggingFacePipeline
+                   |
+                   v
+            StrOutputParser
+
 """
 
 from langchain.schema.runnable import RunnableParallel
