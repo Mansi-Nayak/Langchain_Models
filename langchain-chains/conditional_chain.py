@@ -2,6 +2,29 @@
 This script classifies sentiment from user feedback and generates a response
 based on that sentiment.It uses google/flan-t5-base, which runs on CPU. If the
 model fails to follow JSON output, we handle it manually.
+
+                 RunnableBranch
+                /       |       \
+               /        |        \
+              /         |         \
+Condition:   x.sentiment == "positive"   -->   PromptTemplate (positive)
+                                              |
+                                              v
+                                       HuggingFacePipeline
+                                              |
+                                              v
+                                       StrOutputParser
+
+Condition:   x.sentiment == "negative"   -->   PromptTemplate (negative)
+                                              |
+                                              v
+                                       HuggingFacePipeline
+                                              |
+                                              v
+                                       StrOutputParser
+
+Default: (fallback) --> RunnableLambda (returns static fallback text)
+
 """
 
 import json
