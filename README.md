@@ -65,6 +65,13 @@ This project demonstrates various capabilities of Langchain models by working wi
    - Runnable Passthrough
    - Runnable Lambda
    - Runnable Branch
+
+10. **Langchain Document Loaders**
+   - Text Loader (cricket.txt)
+   - PDF Loader (dl-curriculum.pdf)
+   - Directory Loader (books(*.pdf))
+   - Web Base Loader (url)
+   - CSV Loader (Social_Network_Ads.csv)
 ---
 
 ## Technologies Used
