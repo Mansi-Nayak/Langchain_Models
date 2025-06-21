@@ -5,6 +5,15 @@ CPU, requiring no internet API keys.LangChain's PromptTemplate and
 OutputParser are used to construct and parse the generation chain.
 The HuggingFacePipeline connects the model to LangChain seamlessly.
 The result is printed, and the execution chain graph is optionally displayed.
+
+                PromptTemplate
+                      |
+                      v
+             HuggingFacePipeline
+                      |
+                      v
+              StrOutputParser
+
 """
 
 from langchain_community.llms import HuggingFacePipeline
