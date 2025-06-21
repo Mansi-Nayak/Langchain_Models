@@ -5,6 +5,23 @@ topic using LangChain and the local model.Then, it summarizes the report into
 5 key points using a second prompt.The model operates fully offline and
 requires no external API keys.The output and the LangChain pipeline graph are
 printed at the end.
+                      prompt1
+                        |
+                        v
+            HuggingFacePipeline (LLM - Falcon-RW-1B)
+                        |
+                        v
+                StrOutputParser
+                        |
+                        v
+                      prompt2
+                        |
+                        v
+            HuggingFacePipeline (LLM - Falcon-RW-1B)
+                        |
+                        v
+                StrOutputParser
+
 """
 
 from langchain_community.llms import HuggingFacePipeline
