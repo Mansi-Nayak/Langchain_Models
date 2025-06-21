@@ -60,6 +60,11 @@ This project demonstrates various capabilities of Langchain models by working wi
    - Retrieval QA Chain
    - Langchain demo problem Google Colab
    - Langchain demo solution Google Colab
+   - Runnable Sequence
+   - Runnable Parallel
+   - Runnable Passthrough
+   - Runnable Lambda
+   - Runnable Branch
 ---
 
 ## Technologies Used
